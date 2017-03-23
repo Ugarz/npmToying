@@ -4,11 +4,13 @@ var colors = require('colors');
   console.log("Module charged" .green);
 })()
 
-function errMsg(){
-  console.log("Oops, an error occured !" .red);
+function errMsg(msg){
+  if(!msg) return console.log("Oops, an error occured !" .red);
+  console.log(msg .red);
 }
 
 function saySomething(msg){
+  if(!msg) return new Error("Oops, please provide a message !" .red);
   console.log(`${msg}` .blue);
 }
 
