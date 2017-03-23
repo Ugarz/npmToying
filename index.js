@@ -1,14 +1,18 @@
 var colors = require('colors');
 
-function printMsg(){
-  console.log("Hey, c'est un message du module !" .red);
+(function(){
+  console.log("Module charged" .green);
+})()
+
+function errMsg(){
+  console.log("Oops, an error occured !" .red);
 }
 
-function printGreen(msg){
-  console.log(msg .green);
+function saySomething(msg){
+  console.log(`${msg}` .blue);
 }
 
 module.exports = {
-	printMsg,
-	printGreen
+	errMsg,
+	saySomething
 }
